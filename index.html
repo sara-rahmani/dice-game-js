@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Dice Game</title>
+</head>
+<body class="wrapper">
+     
+    <h1>Let's Play</h1>
+    <button  type="button" class="butn" onclick="aboutGame()">About The Game</button>
+
+    <div id="aboutGame" class="aboutGame" >
+      <section> You can roll a pair of dice 3 times. 
+       After the third roll of the dice the player with highest score wins.
+      </br>The scoring for the game works as follows:
+    </br>
+        <li>If any of the players(you or the computer) two dice comes up as a 1 then the score for that round for the player is 0.</li>
+        <li>If the player rolls a pair of the same numbers then the players score is the total of the two dice times 2.</li>
+        <li>If the player rolls any other combination of dice other than the ones mentioned above
+            then the players score is the total value of the two dice.</li>
+
+      </section>
+    </div>
+    
+    <div class="container">
+
+
+        <div class="player" id="player">
+             <h3>Player</h3>
+        <p>-</p>
+        <div class="dice">
+            <img id="img1" src="images/dice6.png">
+            <img id="img2" src="images/dice6.png">
+        </div>
+        <h2></h2>
+       </div>
+
+
+
+      <div class="computer" id="computer">
+         <h3>Computer</h3>
+        <p>-</p>
+        <div class="dice">
+            <img id="img3" src="images/dice6.png">
+           <img id="img4" src="images/dice6.png">
+        </div>
+              <h2></h2>
+    </div>
+    </div>
+    
+
+
+    <div class="bottom" id="bottom">
+        
+        <h1>The Winner is ____ ?</h1>
+       
+        <button type="button" class="butn" id="butn"
+            onClick="rollTheDice()">Roll the Dice </button>
+
+        <button type="button" class="butn" id="butn_reset">RESET </button>
+
+   <button id="sound" type="button" class="butn"  onclick="playAudio()" > Pause Music</button>
+   <audio src="mp3/gameSound.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
+
+    </div>
+   
+    <script src="scripts/script.js">
+
+    </script>
+</body>
+</html>
